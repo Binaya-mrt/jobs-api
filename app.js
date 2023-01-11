@@ -34,6 +34,9 @@ app.use(xss());
 // extra packages
 
 // routes
+app.get("/", (req, res) => {
+  res.send("k xa hajur");
+});
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/jobs", authenticateUser, jobRoutes);
 
